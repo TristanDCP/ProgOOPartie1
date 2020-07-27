@@ -15,7 +15,7 @@ Dans un nouveau fichier **Hero.php**, créer la classe **Hero héritant de Chara
 * L'attribut **weapon** permettra de définir le nom de l'arme équipée,  
 * **weaponDamage** indiquera les dégâts basiques de l'arme,  
 * **shield** définira le nom du bouclier équipée,
-* **shieldValue** idiquera la nombre de dégâts que le bouclier encaisse à la place du héros.  
+* **shieldValue** indiquera la nombre de dégâts que le bouclier encaisse à la place du héros.  
 
 Les attributs ne doivent être accessibles **pour personne !**
 ## Exercice 5
