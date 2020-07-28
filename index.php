@@ -3,8 +3,7 @@ require_once('Character.php');
 require_once('Hero.php');
 require_once('Orc.php');
 $hero = new Hero(2000,0, 'Shear Trigger', 250, 'Crystal Mail', 600);
-$ennemi = new Orc(500,0);
-$orcAttackValue = $ennemi->randomOrcAttackDamage();
+$orc = new Orc(500,0);
 $increaseValue = +30;
 
 ?>
@@ -18,16 +17,10 @@ $increaseValue = +30;
 </head>
 <body>
 <?php
-
-echo 'Le héros possède  ' .$hero->getHealth(). ' point de vie de base <br>';
-echo 'L\'Orc possède  ' .$ennemi->getDamage(). ' points d\'attaque';
-
-while($hero->attacked($ennemi->getDamage())){
-    $hero->setHealth($newHealth);
-    $hero->rageIncrease($increaseValue);
-    echo 'Tu as maintenant : ' .$hero->getHealth(). ' point de vie <br>';
-}
-?>
-
+echo 'Le héros possède  ' .$hero->getHealth(). ' point de vie de base <br>';?>
+<?php $orc->randomOrcAttackDamage() ?>
+<p>L'orc attaque le héros pour <?= $orc->getDamage()?> dégats</p>
+<?php $hero->attacked($orc->getDamage())?>
+<p>Le héros a maintenant <?= $hero->getHealth()  ?></p>
 </body>
 </html>
