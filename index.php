@@ -22,7 +22,7 @@ $increaseValue = +30;
 <?php 
 while($hero->getHealth() > 0){
      $orc->randomOrcAttackDamage(); ?>
-     <?= '----------------------------------------------------------------------------------' ?>
+     <?= '<hr>'?>
     <p>L'orc attaque le héros pour <?= $orc->getDamage() - $hero->getShieldValue()?> dégats</p>
     <?php $hero->attacked($orc->getDamage())?>
     <p>Le héros a maintenant <?= $hero->getHealth()?> point de vie</p>
@@ -31,9 +31,9 @@ while($hero->getHealth() > 0){
     <?php if($hero->getRage() > 100){
         $orc->setHealth($orc->getHealth() - $hero->getWeaponDamage())?>
         <p>Le héros attaque l'orc pour  <?= $hero->getWeaponDamage() ?> points de dégats</p>
-        <p>L'orc possède maintenant : <?= $orc->getHealth(- $hero->getWeaponDamage()) ?> points de vie</p>
+        <p>L'orc possède maintenant  <?= $orc->getHealth(- $hero->getWeaponDamage()) ?> points de vie</p>
         <?php $hero->setRage(0)?>
-        <p>Le héros possède maintenant : <?= $hero->getRage() ?> points de rage</p>
+        <p>Le héros possède maintenant  <?= $hero->getRage() ?> points de rage</p>
         <?php
          if($orc->getHealth() <= 0){?>
          <p> <?='L\'orc est décédé de mort subite'; ?></p>
