@@ -1,0 +1,55 @@
+html{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    color:white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: small;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    background-color:black;
+    background-image: url();
+    background-repeat:no-repeat;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.container{
+    max-height: 100%;
+}
+
+.stats{
+    display: inline-block;
+}
+
+.health{
+    color: rgb(13, 192, 13);
+    padding-right:1rem;
+}
+
+.protection{
+    color: rgba(0, 174, 255, 0.76);
+}
+
+.damage{
+    color:rgba(241, 56, 56, 0.781);
+}
+
+.rage{
+    color: orange;
+}
+
+.namefocus{
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+.textcontainer{
+    background-color: rgb(255, 255, 255, 0.2);
+
+}
