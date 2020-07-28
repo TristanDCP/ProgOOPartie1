@@ -57,5 +57,10 @@ class Hero extends Character{
       $newHealth = $this->getHealth() - ($attackValue - $this->getShieldValue());
       $this->setHealth($newHealth);
    }
+
+   public function rageIncrease($increaseValue){
+      $rageValue = $this->getRage();
+      $this->setRage($rageValue + $increaseValue);
    }
 
+   }
