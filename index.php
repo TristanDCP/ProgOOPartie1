@@ -45,7 +45,7 @@ while($hero->getHealth() > 0){
     <?php
 } 
 ?>
-    <?php if($hero->getHealth() < 0){
+    <?php if($hero->getHealth() <= 0){
         echo 'Le héros est mort.';
     }?>
 <?php
