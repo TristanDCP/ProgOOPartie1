@@ -13,7 +13,9 @@ require_once('Hero.php');
 </head>
 <body>
 <?php
-$personnage = new Hero(500,777, 'Excalipoor', 1200, 'Boubouclier', 250);
+$personnage = new Hero(500,777, '光の尻尾', 1200, 'Boubouclier', 250);
+$personnage->attacked(300);
+echo 'Tu as maintenant : ' .$personnage->getHealth(). ' point de vie';
 ?>
 
 </body>

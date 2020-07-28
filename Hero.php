@@ -51,8 +51,11 @@ class Hero extends Character{
       echo 'Weapon name : ' . $this->getWeapon() . '<br>';
       echo 'Protection : ' . $this->getShieldValue() . '<br>';
       echo 'Nom du bouclard : ' . $this->getShield() . '<br>';
-
-
    } 
+
+   public function attacked($attackValue){
+      $newHealth = $this->getHealth() - ($attackValue - $this->getShieldValue());
+      $this->setHealth($newHealth);
+   }
    }
 
