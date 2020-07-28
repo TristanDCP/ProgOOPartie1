@@ -5,6 +5,7 @@ require_once('Orc.php');
 $hero = new Hero(2000,0, 'Shear Trigger', 250, 'Crystal Mail', 600);
 $orc = new Orc(500,0);
 $increaseValue = +30;
+$i = $hero->getHealth();
 
 ?>
 
@@ -16,11 +17,20 @@ $increaseValue = +30;
     <title>Warcraft</title>
 </head>
 <body>
+<?php echo 'Le héros possède  ' .$hero->getHealth(). ' point de vie de base <br>';?>
+<?php 
+while($hero->getHealth() > 0){
+     $orc->randomOrcAttackDamage(); ?>
+    <p>L'orc attaque le héros pour <?= $orc->getDamage() - $hero->getShieldValue()?> dégats</p>
+    <?php $hero->attacked($orc->getDamage())?>
+    <p>Le héros a maintenant <?= $hero->getHealth()?></p>
+    <?php if($hero->getHealth() < 0){
+        echo 'Le héros est mort.';
+    }?>
 <?php
-echo 'Le héros possède  ' .$hero->getHealth(). ' point de vie de base <br>';?>
-<?php $orc->randomOrcAttackDamage() ?>
-<p>L'orc attaque le héros pour <?= $orc->getDamage()?> dégats</p>
-<?php $hero->attacked($orc->getDamage())?>
-<p>Le héros a maintenant <?= $hero->getHealth()  ?></p>
+}
+?>
+
+
 </body>
 </html>
